@@ -1,26 +1,37 @@
+// Import des dépendances React nécessaires
 import React from "react";
+// Import des composants de mise en page de React Bootstrap
 import { Container, Row, Col } from "react-bootstrap";
+// Import du composant Player qui représente une carte de joueur
 import Player from "./Player";
+// Import des données des joueurs depuis le fichier players.js
 import players from "./players";
 
+// Composant PlayersList qui affiche la grille de cartes des joueurs
 const PlayersList = () => {
-	return (
-		<Container fluid className=" py-4">
-			<Row className="justify-content-center g-2">
-				{players.map((player, index) => (
-					<Col
-						key={index}
-						xs={12}
-						md={6}
-						lg={3}
-						className="d-flex justify-content-center  mx-4 my-4 "
-					>
-						<Player {...player} />
-					</Col>
-				))}
-			</Row>
-		</Container>
-	);
+  return (
+    // Container fluid pour une largeur maximale avec padding vertical
+    <Container fluid className=" py-4">
+      {/* Row pour organiser les cartes en grille avec espacement */}
+      <Row className="justify-content-center g-2">
+        {/* Mapping sur le tableau des joueurs pour créer une carte par joueur */}
+        {players.map((player, index) => (
+          <Col
+            key={index} // Clé unique requise par React pour le mapping
+            xs={12} // Pleine largeur sur mobile (extra small)
+            md={8} // 8 colonnes sur tablette (medium)
+            lg={3} // 3 colonnes sur desktop (large)
+            xl={3} // 3 colonnes sur grand écran (extra large)
+            className="d-flex justify-content-center  mx-4 my-4 " // Centrage et marges
+          >
+            {/* Rendu du composant Player avec les propriétés du joueur */}
+            <Player {...player} />
+          </Col>
+        ))}
+      </Row>
+    </Container>
+  );
 };
 
+// Export du composant pour utilisation dans App.js
 export default PlayersList;

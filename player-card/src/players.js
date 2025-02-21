@@ -1,18 +1,20 @@
+// Tableau contenant les données des meilleurs joueurs de football actuels
+// Chaque joueur est représenté par un objet avec des informations détaillées
 const players = [
   {
-    name: "Kylian Mbappé",
-    team: "Real Madrid",
-    nationality: "French",
-    playNumber: 7,
-    age: 25,
-    position: "Attaquant",
-    marketValue: "180M€",
-    trophees: {
-      worldCup: 1,
-      leagueTitles: 6,
-      personalAwards: ["Meilleur buteur Ligue 1 2024", "Soulier d'Or 2023"]
+    name: "Kylian Mbappé", // Nom complet du joueur
+    team: "Real Madrid", // Club actuel
+    nationality: "French", // Nationalité
+    playNumber: 7, // Numéro de maillot
+    age: 25, // Âge du joueur
+    position: "Attaquant", // Poste sur le terrain
+    marketValue: "180M€", // Valeur marchande estimée
+    trophees: { // Palmarès du joueur
+      worldCup: 1, // Nombre de Coupes du monde
+      leagueTitles: 6, // Nombre de titres en championnat
+      personalAwards: ["Meilleur buteur Ligue 1 2024", "Soulier d'Or 2023"] // Récompenses individuelles
     },
-    imageUrl: "https://i.pinimg.com/1200x/76/e1/39/76e1394ffc41a8a826ea92362c13030f.jpg"
+    imageUrl: "https://i.pinimg.com/1200x/76/e1/39/76e1394ffc41a8a826ea92362c13030f.jpg" // URL de la photo du joueur
   },
   {
     name: "Erling Haaland",
@@ -119,4 +121,5 @@ const players = [
   }
 ];
 
+// Export du tableau des joueurs pour utilisation dans d'autres composants React
 export default players;
