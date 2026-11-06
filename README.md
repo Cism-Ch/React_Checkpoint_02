@@ -14,26 +14,26 @@ L'application affiche une carte de joueur avec des informations telles que :
 ## Installation
 
 1. Clonez ce dépôt
-2. Installez les dépendances :
+2. Installez les dépendances avec pnpm :
 ```bash
-npm install
+pnpm install
 ```
 
 ## Scripts Disponibles
 
 Dans le répertoire du projet, vous pouvez exécuter :
 
-### `npm start`
+### `pnpm start`
 
 Lance l'application en mode développement.\
-Ouvrez [http://localhost:3000](http://localhost:3000) pour la voir dans votre navigateur.
+Ouvrez [http://localhost:5173](http://localhost:5173) pour la voir dans votre navigateur.
 
 La page se rechargera automatiquement lorsque vous ferez des modifications.\
 Vous pourrez voir les erreurs de lint dans la console.
 
-### `npm run build`
+### `pnpm build`
 
-Compile l'application pour la production dans le dossier `build`.\
+Compile l'application pour la production dans le dossier `dist`.\
 Elle est correctement regroupée en mode production et la construction est optimisée pour les meilleures performances.
 
 Le build est minifié et les noms de fichiers incluent les hashes.\
